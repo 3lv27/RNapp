@@ -1,3 +1,8 @@
+import React from 'react'
+import { View } from 'react-native'
+import { FontAwesome, MaterialIcons, MaterialCommunityIcons }from '@expo/vector-icons'
+import { white } from './colors'
+
 export function getMetricMetaInfo(metric) {
   const info = {
     run: {
@@ -91,17 +96,13 @@ export function getMetricMetaInfo(metric) {
       }
     },
   }
-
-  return typeof metric === 'undefined'
-    ? info
-    : info[metric]
+  return typeof metric === 'undefined' ? info : info[metric]
 }
 
 export function isBetween(num, x, y) {
   if (num >= x && num <= y) {
     return true
   }
-
   return false
 }
 
